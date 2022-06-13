@@ -2,6 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # npm test
-
-echo "Omambia Coding Standards"
-# exit 1
+echo "Running Packages"
+lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents
